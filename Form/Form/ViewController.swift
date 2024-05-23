@@ -104,7 +104,7 @@ class ViewController: UIViewController, UITableViewDataSource {
         formTwoTextField.addAction(textFieldAction, for: .editingChanged)
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewWillDisappear(_ animated: Bool) {
         super.viewDidAppear(animated)
         formOneTextField.removeAction(textFieldAction, for: .editingChanged)
         formTwoTextField.removeAction(textFieldAction, for: .editingChanged)
