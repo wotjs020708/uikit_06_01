@@ -13,6 +13,14 @@ class CustomCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?){
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        setup()
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        setup()
+    }
+    func setup() {
         animalimageView.contentMode = .scaleAspectFit
         animalimageView.translatesAutoresizingMaskIntoConstraints = false
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -31,9 +39,9 @@ class CustomCell: UITableViewCell {
             
         ])
     }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    func configure(item: Animal) {
+        animalimageView.image = item.image
+        nameLabel.text = item.name
     }
     
     
@@ -75,8 +83,8 @@ class ViewController: UIViewController, UITableViewDataSource {
 //        config.text = animals[indexPath.row].name
 //        config.image = animals[indexPath.row].image
 //        cell.contentConfiguration = config
-        cell.animalimageView.image = animals[indexPath.row].image
-        cell.nameLabel.text = animals[indexPath.row].name
+        let animal: Animal = animals[indexPath.row]
+        cell.configure(item: animal)
         return cell
     }
 }
