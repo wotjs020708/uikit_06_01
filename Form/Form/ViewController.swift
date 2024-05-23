@@ -15,16 +15,19 @@ class ViewController: UIViewController, UITableViewDataSource {
     lazy var tableView: UITableView = {
         let tableView = UITableView(frame: view.bounds, style: .insetGrouped)
         tableView.dataSource = self
+        tableView.rowHeight = 80
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         return tableView
     }()
     
     let formOnelabel = UILabel()
     let formOneTextField = UITextField()
+    let formOneSwitch = UISwitch()
     let formTwoLabel = UILabel()
     let formTwoTextField = UITextField()
     let resultLabelOne = UILabel()
     let resultLabelTwo = UILabel()
+    let resultButton = UIButton(type: .system)
     lazy var textFieldAction = UIAction(handler: textFieldDidChange)
     
     
@@ -33,7 +36,7 @@ class ViewController: UIViewController, UITableViewDataSource {
         super.viewDidLoad()
         view.backgroundColor = .white
         view.addSubview(tableView)
-       
+        
     }
     
     // MARK: UITableViewDateSource
@@ -43,11 +46,23 @@ class ViewController: UIViewController, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        2
+        if section == 0 {
+            return 3
+        }
+        switch section{
+        case 0:
+            return 3
+        case 1:
+            return formOneSwitch.isOn ? 2: 0
+        case 2:
+            return 3
+        default:
+            return 0
+        }
     }
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if section == 2{
-            return "괄과"
+            return "결과"
         }
         
         return nil
@@ -58,7 +73,7 @@ class ViewController: UIViewController, UITableViewDataSource {
         case 0:
             return "폼 #1"
         case 1:
-            return "폼 #2"
+            return formOneSwitch.isOn ? "폼 #2" : nil
         default:
             return nil
         }
@@ -66,7 +81,18 @@ class ViewController: UIViewController, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        cell.contentView.subviews.forEach({ view in view.removeFromSuperview() })
+        switch indexPath.section {
+        case 0:
+            setupFormOne(view: cell.contentView, indexPath: indexPath)
+        case 1:
+            setupFormTwo(view: cell.contentView, indexPath: indexPath)
+        case 2:
+            setupResults(view: cell.contentView, indexPath: indexPath)
+        default:
+            break
             
+        }
         return cell
     }
     
@@ -84,70 +110,122 @@ class ViewController: UIViewController, UITableViewDataSource {
         formTwoTextField.removeAction(textFieldAction, for: .editingChanged)
     }
     
-    func setupFormOne() {
-        formOnelabel.text = "이것은 첫 번째 폼입니다"
-        formOnelabel.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(formOnelabel)
+    func setupFormOne(view: UIView, indexPath: IndexPath) {
         
-        formOneTextField.borderStyle = .roundedRect
-        formOneTextField.placeholder = "여기에 입력하세요"
-        formOneTextField.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(formOneTextField)
-        
-        
-        NSLayoutConstraint.activate([
-            formOnelabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
-            formOnelabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-            formOneTextField.topAnchor.constraint(equalTo: formOnelabel.bottomAnchor, constant: 10),
-            formOneTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-            formOneTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20)
+        if indexPath.section != 0 { return }
+        switch indexPath.row {
+        case 0:
             
-        ])
+            formOnelabel.text = "이것은 첫 번째 폼입니다"
+            formOnelabel.translatesAutoresizingMaskIntoConstraints = false
+            view.addSubview(formOnelabel)
+            NSLayoutConstraint.activate([
+                formOnelabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
+                formOnelabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            ])
+        case 1:
+            formOneTextField.borderStyle = .roundedRect
+            formOneTextField.placeholder = "여기에 입력하세요"
+            formOneTextField.translatesAutoresizingMaskIntoConstraints = false
+            view.addSubview(formOneTextField)
+            NSLayoutConstraint.activate([
+                formOneTextField.centerYAnchor.constraint(equalTo:  view.centerYAnchor, constant: 10),
+                formOneTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+                formOneTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20)
+            ])
+        case 2:
+            formOneSwitch.translatesAutoresizingMaskIntoConstraints = false
+            
+            formOneSwitch.addAction(UIAction{ [weak self] _ in
+                self?.tableView.reloadData()
+            }, for: .valueChanged)
+            
+            view.addSubview(formOneSwitch)
+            NSLayoutConstraint.activate([
+                formOneSwitch.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+                formOneSwitch.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+            ])
+        default:
+            break
+        }
+        
     }
     
-    func setupFormTwo() {
-        formTwoLabel.text = "이것은 두번째 폼입니다."
-        formTwoLabel.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(formTwoLabel)
-        
-        formTwoTextField.borderStyle = .roundedRect
-        formTwoTextField.placeholder = "여기에 입력하세요"
-        formTwoTextField.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(formTwoTextField)
-        
-        NSLayoutConstraint.activate([
-            formTwoLabel.topAnchor.constraint(equalTo: formOneTextField.bottomAnchor, constant: 20),
-            formTwoLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-            formTwoTextField.topAnchor.constraint(equalTo: formTwoLabel.bottomAnchor, constant: 10),
-            formTwoTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-            formTwoTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20)
+    func setupFormTwo(view: UIView, indexPath: IndexPath) {
+        if indexPath.section != 1 { return }
+        switch indexPath.row {
             
-        ])
+        case 0:
+            formTwoLabel.text = "이것은 두번째 폼입니다."
+            formTwoLabel.translatesAutoresizingMaskIntoConstraints = false
+            view.addSubview(formTwoLabel)
+            
+            NSLayoutConstraint.activate([
+                
+                formTwoLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 20),
+                formTwoLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            ])
+            
+        case 1:
+            formTwoTextField.borderStyle = .roundedRect
+            formTwoTextField.placeholder = "여기에 입력하세요"
+            formTwoTextField.translatesAutoresizingMaskIntoConstraints = false
+            view.addSubview(formTwoTextField)
+            
+            NSLayoutConstraint.activate([
+                formTwoTextField.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 10),
+                formTwoTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+                formTwoTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20)
+                
+            ])
+        default:
+            break
+        }
+        
     }
     
-    func setupResults() {
-        resultLabelOne.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(resultLabelOne)
+    func setupResults(view: UIView, indexPath: IndexPath) {
         
-        resultLabelTwo.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(resultLabelTwo)
-        
-        NSLayoutConstraint.activate([
-            resultLabelOne.topAnchor.constraint(equalTo: formTwoTextField.bottomAnchor, constant: 20),
-            resultLabelOne.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-            resultLabelTwo.topAnchor.constraint(equalTo: resultLabelOne.bottomAnchor, constant: 10),
-            resultLabelTwo.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20)
-        ])
-        
+        if indexPath.section != 2 { return }
+        switch indexPath.row {
+        case 0:
+            resultLabelOne.translatesAutoresizingMaskIntoConstraints = false
+            view.addSubview(resultLabelOne)
+            NSLayoutConstraint.activate([
+                resultLabelOne.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 20),
+                resultLabelOne.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            ])
+            
+        case 1:
+            resultLabelTwo.translatesAutoresizingMaskIntoConstraints = false
+            view.addSubview(resultLabelTwo)
+            NSLayoutConstraint.activate([
+                resultLabelTwo.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 10),
+                resultLabelTwo.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20)
+            ])
+        case 2:
+            resultButton.translatesAutoresizingMaskIntoConstraints = false
+            
+            resultButton.setTitle("클릭하세요.", for: .normal)
+            resultButton.isEnabled = formOneSwitch.isOn
+            view.addSubview(resultButton)
+            
+            NSLayoutConstraint.activate([
+                resultButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+                resultButton.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+            ])
+        default:
+            break
+        }
     }
     
     func textFieldDidChange(_ action: UIAction) {
         guard let textField = action.sender as? UITextField else { return }
         
         if textField == formOneTextField {
-            resultLabelOne.text = "폼 #1 = \(formOneTextField.text ?? "" )"
+            resultLabelOne.text = "폼 #1 = \(textField.text ?? "")"
         } else {
-            resultLabelTwo.text = "폼 #2 = \(formTwoTextField.text ?? "")"
+            resultLabelTwo.text = "폼 #2 = \(textField.text ?? "")"
         }
     }
     
