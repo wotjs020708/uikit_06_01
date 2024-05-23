@@ -7,27 +7,47 @@
 
 import UIKit
 
+struct Animal {
+    let name: String
+}
+
+struct Animalcategory {
+    let catagory: String
+    let animals: [Animal]
+}
+
 class ViewController: UIViewController, UITableViewDataSource {
 
-    let items = ["고양이", "강아지", "새", " 파출류", "물고기"]
+    let categories = [
+        Animalcategory(catagory: "포유륲", animals: [Animal(name: "고양이"), Animal(name: "강아지")]),
+        Animalcategory(catagory: "파충류", animals: [Animal(name: "거북이"), Animal(name: "도마뱀")])
+    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let tableview = UITableView(frame:  view.bounds)
+        
+        //테이블 스타일 변경 가능 (생성자 함수예시)
+        let tableview = UITableView(frame:  view.bounds, style: .insetGrouped)
         tableview.dataSource = self
         tableview.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         view.addSubview(tableview)
     }
 
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return categories.count
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items.count
+        return categories[section].animals.count
+    }
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return categories[section].catagory
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") ?? UITableViewCell(style: .default, reuseIdentifier: "cell")
         var config = cell.defaultContentConfiguration()
-        config.text = items[indexPath.row]
+        config.text = categories[indexPath.section].animals[indexPath.row].name
         cell.contentConfiguration = config
         
         return cell
