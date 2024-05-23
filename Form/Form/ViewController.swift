@@ -10,7 +10,7 @@ import UIKit
 
 
 class ViewController: UIViewController {
-
+    
     let formOnelabel = UILabel()
     let formOneTextField = UITextField()
     let formTwoLabel = UILabel()
@@ -28,19 +28,21 @@ class ViewController: UIViewController {
         setupFormTwo()
         setupResults()
         
-//        formOneTextField.addAction(UIAction{ [weak self] _ in
-//            self?.resultLabelOne.text = "폼 #1 = \(self?.formOneTextField.text ?? "" )"
-//        }, for: .editingChanged)
-//        
-//        formTwoTextField.addAction(UIAction{ [weak self] _ in
-//            self?.resultLabelTwo.text = "폼 #2 = \(self?.formTwoTextField.text ?? "")"
-//        }, for: .editingChanged)
-        formOneTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
-        formTwoTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
+        //        formOneTextField.addAction(UIAction{ [weak self] _ in
+        //            self?.resultLabelOne.text = "폼 #1 = \(self?.formOneTextField.text ?? "" )"
+        //        }, for: .editingChanged)
+        //
+        //        formTwoTextField.addAction(UIAction{ [weak self] _ in
+        //            self?.resultLabelTwo.text = "폼 #2 = \(self?.formTwoTextField.text ?? "")"
+        //        }, for: .editingChanged)
+        //        formOneTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
+        //        formTwoTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
         
+        formOneTextField.addAction(UIAction(handler: textFieldDidChange), for: .editingChanged)
+        formTwoTextField.addAction(UIAction(handler: textFieldDidChange), for: .editingChanged)
         
     }
-
+    
     func setupFormOne() {
         formOnelabel.text = "이것은 첫 번째 폼입니다"
         formOnelabel.translatesAutoresizingMaskIntoConstraints = false
@@ -98,13 +100,23 @@ class ViewController: UIViewController {
         
     }
     
-    @objc func textFieldDidChange(_ textField: UITextField) {
+    func textFieldDidChange(_ action: UIAction) {
+        guard let textField = action.sender as? UITextField else { return }
+        
         if textField == formOneTextField {
             resultLabelOne.text = "폼 #1 = \(formOneTextField.text ?? "" )"
         } else {
             resultLabelTwo.text = "폼 #2 = \(formTwoTextField.text ?? "")"
         }
     }
-
+    
+    //    @objc func textFieldDidChange(_ textField: UITextField) {
+    //        if textField == formOneTextField {
+    //            resultLabelOne.text = "폼 #1 = \(formOneTextField.text ?? "" )"
+    //        } else {
+    //            resultLabelTwo.text = "폼 #2 = \(formTwoTextField.text ?? "")"
+    //        }
+    //    }
+    
 }
 
