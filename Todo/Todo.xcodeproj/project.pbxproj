@@ -7,31 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4B42A7552BFF26C800BB0B4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B42A7542BFF26C800BB0B4E /* AppDelegate.swift */; };
-		4B42A7572BFF26C800BB0B4E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B42A7562BFF26C800BB0B4E /* SceneDelegate.swift */; };
-		4B42A7592BFF26C800BB0B4E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B42A7582BFF26C800BB0B4E /* ViewController.swift */; };
-		4B42A75C2BFF26C800BB0B4E /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 4B42A75B2BFF26C800BB0B4E /* Base */; };
-		4B42A75E2BFF26CA00BB0B4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B42A75D2BFF26CA00BB0B4E /* Assets.xcassets */; };
-		4B42A7612BFF26CA00BB0B4E /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 4B42A7602BFF26CA00BB0B4E /* Base */; };
-		4B42A7692BFF31E900BB0B4E /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B42A7682BFF31E900BB0B4E /* Animal.swift */; };
-		4B42A76B2BFF320C00BB0B4E /* NextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B42A76A2BFF320C00BB0B4E /* NextViewController.swift */; };
+		4B6BD6922C001497006565F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6BD6912C001497006565F9 /* AppDelegate.swift */; };
+		4B6BD6942C001497006565F9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6BD6932C001497006565F9 /* SceneDelegate.swift */; };
+		4B6BD6962C001497006565F9 /* TodoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6BD6952C001497006565F9 /* TodoListViewController.swift */; };
+		4B6BD6992C001497006565F9 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 4B6BD6982C001497006565F9 /* Base */; };
+		4B6BD69B2C001498006565F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B6BD69A2C001498006565F9 /* Assets.xcassets */; };
+		4B6BD69E2C001498006565F9 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 4B6BD69D2C001498006565F9 /* Base */; };
+		4B6BD6A62C004CF5006565F9 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6BD6A52C004CF5006565F9 /* Todo.swift */; };
+		4B6BD6A82C004EB5006565F9 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6BD6A72C004EB5006565F9 /* CustomCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4B42A7512BFF26C800BB0B4E /* NavigationController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NavigationController.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		4B42A7542BFF26C800BB0B4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4B42A7562BFF26C800BB0B4E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4B42A7582BFF26C800BB0B4E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		4B42A75B2BFF26C800BB0B4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		4B42A75D2BFF26CA00BB0B4E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		4B42A7602BFF26CA00BB0B4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		4B42A7622BFF26CA00BB0B4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4B42A7682BFF31E900BB0B4E /* Animal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
-		4B42A76A2BFF320C00BB0B4E /* NextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextViewController.swift; sourceTree = "<group>"; };
+		4B6BD68E2C001497006565F9 /* Todo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Todo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B6BD6912C001497006565F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4B6BD6932C001497006565F9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		4B6BD6952C001497006565F9 /* TodoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListViewController.swift; sourceTree = "<group>"; };
+		4B6BD6982C001497006565F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4B6BD69A2C001498006565F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4B6BD69D2C001498006565F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4B6BD69F2C001498006565F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4B6BD6A52C004CF5006565F9 /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
+		4B6BD6A72C004EB5006565F9 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		4B42A74E2BFF26C800BB0B4E /* Frameworks */ = {
+		4B6BD68B2C001497006565F9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,74 +41,74 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4B42A7482BFF26C800BB0B4E = {
+		4B6BD6852C001497006565F9 = {
 			isa = PBXGroup;
 			children = (
-				4B42A7532BFF26C800BB0B4E /* NavigationController */,
-				4B42A7522BFF26C800BB0B4E /* Products */,
+				4B6BD6902C001497006565F9 /* Todo */,
+				4B6BD68F2C001497006565F9 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		4B42A7522BFF26C800BB0B4E /* Products */ = {
+		4B6BD68F2C001497006565F9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4B42A7512BFF26C800BB0B4E /* NavigationController.app */,
+				4B6BD68E2C001497006565F9 /* Todo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4B42A7532BFF26C800BB0B4E /* NavigationController */ = {
+		4B6BD6902C001497006565F9 /* Todo */ = {
 			isa = PBXGroup;
 			children = (
-				4B42A7542BFF26C800BB0B4E /* AppDelegate.swift */,
-				4B42A7562BFF26C800BB0B4E /* SceneDelegate.swift */,
-				4B42A7582BFF26C800BB0B4E /* ViewController.swift */,
-				4B42A76A2BFF320C00BB0B4E /* NextViewController.swift */,
-				4B42A7682BFF31E900BB0B4E /* Animal.swift */,
-				4B42A75A2BFF26C800BB0B4E /* Main.storyboard */,
-				4B42A75D2BFF26CA00BB0B4E /* Assets.xcassets */,
-				4B42A75F2BFF26CA00BB0B4E /* LaunchScreen.storyboard */,
-				4B42A7622BFF26CA00BB0B4E /* Info.plist */,
+				4B6BD6912C001497006565F9 /* AppDelegate.swift */,
+				4B6BD6932C001497006565F9 /* SceneDelegate.swift */,
+				4B6BD6952C001497006565F9 /* TodoListViewController.swift */,
+				4B6BD6A72C004EB5006565F9 /* CustomCell.swift */,
+				4B6BD6A52C004CF5006565F9 /* Todo.swift */,
+				4B6BD6972C001497006565F9 /* Main.storyboard */,
+				4B6BD69A2C001498006565F9 /* Assets.xcassets */,
+				4B6BD69C2C001498006565F9 /* LaunchScreen.storyboard */,
+				4B6BD69F2C001498006565F9 /* Info.plist */,
 			);
-			path = NavigationController;
+			path = Todo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4B42A7502BFF26C800BB0B4E /* NavigationController */ = {
+		4B6BD68D2C001497006565F9 /* Todo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4B42A7652BFF26CA00BB0B4E /* Build configuration list for PBXNativeTarget "NavigationController" */;
+			buildConfigurationList = 4B6BD6A22C001498006565F9 /* Build configuration list for PBXNativeTarget "Todo" */;
 			buildPhases = (
-				4B42A74D2BFF26C800BB0B4E /* Sources */,
-				4B42A74E2BFF26C800BB0B4E /* Frameworks */,
-				4B42A74F2BFF26C800BB0B4E /* Resources */,
+				4B6BD68A2C001497006565F9 /* Sources */,
+				4B6BD68B2C001497006565F9 /* Frameworks */,
+				4B6BD68C2C001497006565F9 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = NavigationController;
-			productName = NavigationController;
-			productReference = 4B42A7512BFF26C800BB0B4E /* NavigationController.app */;
+			name = Todo;
+			productName = Todo;
+			productReference = 4B6BD68E2C001497006565F9 /* Todo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		4B42A7492BFF26C800BB0B4E /* Project object */ = {
+		4B6BD6862C001497006565F9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1540;
 				LastUpgradeCheck = 1540;
 				TargetAttributes = {
-					4B42A7502BFF26C800BB0B4E = {
+					4B6BD68D2C001497006565F9 = {
 						CreatedOnToolsVersion = 15.4;
 					};
 				};
 			};
-			buildConfigurationList = 4B42A74C2BFF26C800BB0B4E /* Build configuration list for PBXProject "NavigationController" */;
+			buildConfigurationList = 4B6BD6892C001497006565F9 /* Build configuration list for PBXProject "Todo" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -116,57 +116,57 @@
 				en,
 				Base,
 			);
-			mainGroup = 4B42A7482BFF26C800BB0B4E;
-			productRefGroup = 4B42A7522BFF26C800BB0B4E /* Products */;
+			mainGroup = 4B6BD6852C001497006565F9;
+			productRefGroup = 4B6BD68F2C001497006565F9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4B42A7502BFF26C800BB0B4E /* NavigationController */,
+				4B6BD68D2C001497006565F9 /* Todo */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		4B42A74F2BFF26C800BB0B4E /* Resources */ = {
+		4B6BD68C2C001497006565F9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4B42A75E2BFF26CA00BB0B4E /* Assets.xcassets in Resources */,
-				4B42A7612BFF26CA00BB0B4E /* Base in Resources */,
-				4B42A75C2BFF26C800BB0B4E /* Base in Resources */,
+				4B6BD69B2C001498006565F9 /* Assets.xcassets in Resources */,
+				4B6BD69E2C001498006565F9 /* Base in Resources */,
+				4B6BD6992C001497006565F9 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		4B42A74D2BFF26C800BB0B4E /* Sources */ = {
+		4B6BD68A2C001497006565F9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4B42A76B2BFF320C00BB0B4E /* NextViewController.swift in Sources */,
-				4B42A7592BFF26C800BB0B4E /* ViewController.swift in Sources */,
-				4B42A7692BFF31E900BB0B4E /* Animal.swift in Sources */,
-				4B42A7552BFF26C800BB0B4E /* AppDelegate.swift in Sources */,
-				4B42A7572BFF26C800BB0B4E /* SceneDelegate.swift in Sources */,
+				4B6BD6962C001497006565F9 /* TodoListViewController.swift in Sources */,
+				4B6BD6A62C004CF5006565F9 /* Todo.swift in Sources */,
+				4B6BD6A82C004EB5006565F9 /* CustomCell.swift in Sources */,
+				4B6BD6922C001497006565F9 /* AppDelegate.swift in Sources */,
+				4B6BD6942C001497006565F9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		4B42A75A2BFF26C800BB0B4E /* Main.storyboard */ = {
+		4B6BD6972C001497006565F9 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				4B42A75B2BFF26C800BB0B4E /* Base */,
+				4B6BD6982C001497006565F9 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		4B42A75F2BFF26CA00BB0B4E /* LaunchScreen.storyboard */ = {
+		4B6BD69C2C001498006565F9 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				4B42A7602BFF26CA00BB0B4E /* Base */,
+				4B6BD69D2C001498006565F9 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -174,7 +174,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		4B42A7632BFF26CA00BB0B4E /* Debug */ = {
+		4B6BD6A02C001498006565F9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -237,7 +237,7 @@
 			};
 			name = Debug;
 		};
-		4B42A7642BFF26CA00BB0B4E /* Release */ = {
+		4B6BD6A12C001498006565F9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -293,7 +293,7 @@
 			};
 			name = Release;
 		};
-		4B42A7662BFF26CA00BB0B4E /* Debug */ = {
+		4B6BD6A32C001498006565F9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -301,7 +301,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = NavigationController/Info.plist;
+				INFOPLIST_FILE = Todo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -312,7 +312,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = kr.co.codegrove.NavigationController;
+				PRODUCT_BUNDLE_IDENTIFIER = kr.co.codegrove.Todo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -320,7 +320,7 @@
 			};
 			name = Debug;
 		};
-		4B42A7672BFF26CA00BB0B4E /* Release */ = {
+		4B6BD6A42C001498006565F9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -328,7 +328,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = NavigationController/Info.plist;
+				INFOPLIST_FILE = Todo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -339,7 +339,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = kr.co.codegrove.NavigationController;
+				PRODUCT_BUNDLE_IDENTIFIER = kr.co.codegrove.Todo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -350,25 +350,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4B42A74C2BFF26C800BB0B4E /* Build configuration list for PBXProject "NavigationController" */ = {
+		4B6BD6892C001497006565F9 /* Build configuration list for PBXProject "Todo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4B42A7632BFF26CA00BB0B4E /* Debug */,
-				4B42A7642BFF26CA00BB0B4E /* Release */,
+				4B6BD6A02C001498006565F9 /* Debug */,
+				4B6BD6A12C001498006565F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4B42A7652BFF26CA00BB0B4E /* Build configuration list for PBXNativeTarget "NavigationController" */ = {
+		4B6BD6A22C001498006565F9 /* Build configuration list for PBXNativeTarget "Todo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4B42A7662BFF26CA00BB0B4E /* Debug */,
-				4B42A7672BFF26CA00BB0B4E /* Release */,
+				4B6BD6A32C001498006565F9 /* Debug */,
+				4B6BD6A42C001498006565F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 4B42A7492BFF26C800BB0B4E /* Project object */;
+	rootObject = 4B6BD6862C001497006565F9 /* Project object */;
 }
