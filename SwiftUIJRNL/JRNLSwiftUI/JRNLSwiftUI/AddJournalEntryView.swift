@@ -9,7 +9,10 @@ import SwiftUI
 
 struct AddJournalEntryView: View {
     @Environment(\.dismiss) var dismiss
+    
     @State private var isGetLocationOn = false
+    @State private var entryTitle = ""
+    @State private var entryBody = ""
     var body: some View {
         NavigationStack {
             Form {
@@ -20,22 +23,30 @@ struct AddJournalEntryView: View {
                 Section(header: Text("Location")) {
                     Toggle("Get Location", isOn: $isGetLocationOn)
                 }
+                Section(header: Text("Title")) {
+                    TextField("Enter Title", text: $entryTitle)
+                }
+                Section(header: Text("Body")) {
+                    TextEditor(text: $entryBody)
+                }
+                Section(header: Text("Photo")){
+                    
+                }
             }
-            Text("Add JournalEntry")
-                .navigationTitle("Add Journal Entry")
-                .navigationBarTitleDisplayMode(.inline)
-                .toolbar {
-                    ToolbarItem(placement: .topBarLeading) {
-                        Button("Cancel") {
-                            dismiss()
-                        }
-                    }
-                    ToolbarItem(placement: .topBarTrailing) {
-                        Button("Save") {
-                            dismiss()
-                        }
+            .navigationTitle("Add Journal Entry")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .topBarLeading) {
+                    Button("Cancel") {
+                        dismiss()
                     }
                 }
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button("Save") {
+                        dismiss()
+                    }
+                }
+            }
         }
     }
 }

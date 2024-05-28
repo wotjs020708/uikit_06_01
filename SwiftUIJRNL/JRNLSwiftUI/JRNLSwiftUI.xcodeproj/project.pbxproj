@@ -14,6 +14,7 @@
 		4BC435F52C05C7EA00422DA1 /* JournalListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC435F42C05C7EA00422DA1 /* JournalListView.swift */; };
 		4BC435F72C05C7F900422DA1 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC435F62C05C7F900422DA1 /* MapView.swift */; };
 		4BC435F92C05CA1F00422DA1 /* AddJournalEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC435F82C05CA1F00422DA1 /* AddJournalEntryView.swift */; };
+		4BC435FB2C05CDB400422DA1 /* JournalEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC435FA2C05CDB400422DA1 /* JournalEntry.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		4BC435F42C05C7EA00422DA1 /* JournalListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalListView.swift; sourceTree = "<group>"; };
 		4BC435F62C05C7F900422DA1 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		4BC435F82C05CA1F00422DA1 /* AddJournalEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddJournalEntryView.swift; sourceTree = "<group>"; };
+		4BC435FA2C05CDB400422DA1 /* JournalEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalEntry.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				4BC435F62C05C7F900422DA1 /* MapView.swift */,
 				4B9A0E5B2C05A5850098AC31 /* Assets.xcassets */,
 				4B9A0E5D2C05A5850098AC31 /* Preview Content */,
+				4BC435FA2C05CDB400422DA1 /* JournalEntry.swift */,
 			);
 			path = JRNLSwiftUI;
 			sourceTree = "<group>";
@@ -146,6 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BC435FB2C05CDB400422DA1 /* JournalEntry.swift in Sources */,
 				4BC435F52C05C7EA00422DA1 /* JournalListView.swift in Sources */,
 				4BC435F72C05C7F900422DA1 /* MapView.swift in Sources */,
 				4B9A0E5A2C05A5830098AC31 /* ContentView.swift in Sources */,
