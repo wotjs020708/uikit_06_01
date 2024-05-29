@@ -60,13 +60,13 @@
 			isa = PBXGroup;
 			children = (
 				4B9A0E572C05A5830098AC31 /* JRNLSwiftUIApp.swift */,
+				4BC435FA2C05CDB400422DA1 /* JournalEntry.swift */,
 				4B9A0E592C05A5830098AC31 /* ContentView.swift */,
 				4BC435F42C05C7EA00422DA1 /* JournalListView.swift */,
 				4BC435F82C05CA1F00422DA1 /* AddJournalEntryView.swift */,
 				4BC435F62C05C7F900422DA1 /* MapView.swift */,
 				4B9A0E5B2C05A5850098AC31 /* Assets.xcassets */,
 				4B9A0E5D2C05A5850098AC31 /* Preview Content */,
-				4BC435FA2C05CDB400422DA1 /* JournalEntry.swift */,
 			);
 			path = JRNLSwiftUI;
 			sourceTree = "<group>";
@@ -290,6 +290,8 @@
 				DEVELOPMENT_ASSET_PATHS = "\"JRNLSwiftUI/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = .;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = .;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -318,6 +320,8 @@
 				DEVELOPMENT_ASSET_PATHS = "\"JRNLSwiftUI/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = .;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = .;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
